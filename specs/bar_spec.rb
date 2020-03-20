@@ -1,30 +1,30 @@
 require("minitest/autorun")
 require('minitest/reporters')
 
+require_relative('../bar')
+require_relative('../rooms')
+require_relative('../guests')
+require_relative('../songs')
+require_relative('../drinks')
 
 Minitest::Reporters.use! Minitest::Reporters::SpecReporter.new
 
-class BarTest < MiniTest::Test
+def setup
+  @drink1 = Drinks.new("Olde Fortran", 2.50, 2)
+  @drink2 = Drinks.new("Lobrau", 3.50, 3)
+  @drink3 = Drinks.new("Pabst", 6.00, 5)
+  @drink4 = Drinks.new("Slurm", 1.00, 0)
+  @drinks_menu = [@drink1, @drink2, @drink3, @drink4]
 
-  def setup
-    @drink1 = Drink.new("Beer", 2.50, 2)
-    @drink2 = Drink.new("Cider", 3.50, 3)
-    @drink3 = Drink.new("Cocktail", 6, 5)
-    @drink4 = Drink.new("Orange & Lemonade", 3, 0)
+  @room1 = Room.new("Human Room", 2)
+  @room2 = Room.new("Robo Room", 2)
 
-    @drinks_menu = [drink1, drink2, drink3, drink4]
-  end
+  @songs = []
 
-  def test_get_drink_name()
-    assert_equal("Beer", @drink1.name())
-  end
+  @bar = Bar.new("Zapp Brannigan's Karaoke Bistro", 5, 100, @drinks_menu, 10)
 
-  def test_drink_price()
-    assert_equal(2.50, @drink1.price())
-  end
-
-  def test_alcohol_level_of_drink()
-    assert_equal(2, @drink1.alc_unit())
-  end
-
+  @guest1 = Guest.new("Leela", 20, "Florence and the Machine - Girl with One Eye")
+  @guest2 = Guest.new("Fry", 5, "Wild Wild West - Will Smith")
+  @guest3 = Guest.new("Bender", 500, "Domo Arigato Mr. Roboto - Styx")
+  @guest4 = Guest.new("Dr. Zoidberg", 0, "Octopus' Garden - The Beatles")
 end
