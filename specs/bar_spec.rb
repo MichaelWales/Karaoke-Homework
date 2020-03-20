@@ -26,5 +26,5 @@ def setup
   @guest1 = Guest.new("Leela", 20, "Florence and the Machine - Girl with One Eye")
   @guest2 = Guest.new("Fry", 5, "Wild Wild West - Will Smith")
   @guest3 = Guest.new("Bender", 500, "Domo Arigato Mr. Roboto - Styx")
-  @guest4 = Guest.new("Dr. Zoidberg", 0, "Octopus' Garden - The Beatles")
+  @guest4 = Guest.new("Zoidberg", 0, "Octopus' Garden - The Beatles")
 end
