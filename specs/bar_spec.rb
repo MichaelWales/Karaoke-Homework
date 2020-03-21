@@ -24,10 +24,10 @@ class BarTest < MiniTest::Test
     @song3 = Songs.new("Domo Arigato Mr. Roboto - Styx")
     @song4 = Songs.new("Octopus' Garden - The Beatles")
 
-    @guest1 = Guests.new("Leela", 20, "Florence and the Machine - Girl with One Eye")
-    @guest2 = Guests.new("Fry", 5, "Wild Wild West - Will Smith")
-    @guest3 = Guests.new("Bender", 500, "Domo Arigato Mr. Roboto - Styx")
-    @guest4 = Guests.new("Dr. Zoidberg", 0, "Octopus' Garden - The Beatles")
+    @guest1 = Guests.new("Leela", 20, "Florence and the Machine - Girl with One Eye", 0)
+    @guest2 = Guests.new("Fry", 5, "Wild Wild West - Will Smith", 0)
+    @guest3 = Guests.new("Bender", 500, "Domo Arigato Mr. Roboto - Styx", 5)
+    @guest4 = Guests.new("Dr. Zoidberg", 0, "Octopus' Garden - The Beatles", 0)
 
     @room1_capacity = []
     @room2_capacity = []

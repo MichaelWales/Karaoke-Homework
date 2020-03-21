@@ -33,4 +33,6 @@ class RoomsTest < MiniTest::Test
     assert_equal(0, @room1.current_capacity.length())
   end
 
+  
+
 end
